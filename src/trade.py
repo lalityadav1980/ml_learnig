@@ -92,7 +92,7 @@ def main():
     # Check if TensorFlow sees a GPU
     print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))
     logging.info("Loading dataset...")
-    df = pd.read_csv("../data/NIFTY_100_minute.csv")
+    df = pd.read_csv("../data/NIFTY_5_minute.csv")
     df['date'] = pd.to_datetime(df['date'])
     df.set_index('date', inplace=True)
 
